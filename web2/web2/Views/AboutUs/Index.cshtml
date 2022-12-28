@@ -1,0 +1,40 @@
+﻿
+@{
+		
+
+				ViewBag.Title = "About Us";
+}
+
+<h2>@ViewBag.Title</h2>
+<style>
+	.user-image-container {
+		height: unset
+	}
+</style>
+<p>Thanks for using our website. The contract information for the architect of this website is betow. have a wonderful day!</p>
+
+@using (Html.BeginForm(FormMethod.Post)) {
+
+	<div id="image-2" class="user-image-container">
+		<img class="user-profile-thumbnail" src="~/images/0678293.jpg" />
+		<div class="event-thumbnail">
+			<center>
+				<div><label id="@Model.FirstName">@Model.FirstName</label><label id="@Model.LastName">@Model.LastName</label></div>
+				<div>
+					<a href="mailto:@Model.Email?subject=Tri-State Music Events" target="_blank" >@Model.Email</a>
+				</div>
+			</center>
+		</div>
+	</div>
+	<div class="section">
+		<button class="button-action" id="btnMore" name="btnSubmit" value="More"><i class='far fa-info-circle'></i> More</button>
+
+		<button class="button-cancel" id="btnClose" name="btnSubmit" value="Close"><i class='e fa fa-times'></i> Close</button>
+	</div>
+}
+
+<script>
+	$(document).ready(function () {
+		SetActiveMenus('about-us');
+	});
+</script>

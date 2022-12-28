@@ -1,0 +1,17 @@
+﻿
+@{
+	ViewBag.Title = "More";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+<p>Although <label id="@Model.FirstName">@Model.FirstName</label><label id="@Model.LastName">@Model.LastName</label> is generally a nice person, without coffe, he's a little cranky in the morning. 
+
+
+@using (Html.BeginForm(FormMethod.Post)) {
+	<div class="section">
+		<button class="button-action" id="btnClose" name="btnSubmit" value="Close"><i class='fa fa-times'></i> Close</button>
+	</div>
+}
